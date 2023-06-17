@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "svelte", "dotenv"]
+  },
+  "include": ["./**/*.ts", "./lib/**/*.svelte", "./svelte.d.ts"]
+}

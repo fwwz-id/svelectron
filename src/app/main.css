@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inspirations */
+/* https://cdn.dribbble.com/userupload/2769599/file/original-54059e3f4aedd0b5e8526ed7f20a384d.png?compress=1&resize=1024x768 */
+/* https://cdn.dribbble.com/userupload/4678156/file/original-eb0be0cfb7164a1ddafa3edf00a0dcb2.png?compress=1&resize=1024x768 */
+
+/* Palette */
+/* https://tools.picsart.com/color/palette-generator/?colors=6545EC-D957A4-51A2E2-101924-715E62-2E90ED-33324D-94D847 */
+/*
+#101924 -- mirage
+#6545EC -- royal blue
+#D957A4 -- cranberry
+#51A2E2 -- picton blue
+#2E90ED -- accent picton blue
+#33324D -- martinique
+#94D847 -- conifer
+*/
+
+@layer base {
+  a, p {
+    @apply text-white;
+  }
+}
