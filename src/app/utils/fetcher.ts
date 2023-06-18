@@ -1,14 +1,4 @@
 import axios from "axios";
-
-const apiurl = "https://api.rawg.io/api";
-
-const fetcher = axios.create({
-  baseURL: apiurl,
-  params: {
-    key: process.env.RAWG_API_KEY,
-  },
-});
-
 export interface IAPIResponse<Result = any> {
   count: number;
   next: string;
@@ -16,4 +6,23 @@ export interface IAPIResponse<Result = any> {
   results: Result;
 }
 
-export default fetcher;
+const apiurl = {
+  subdomain: "https://api.rawg.io/api",
+  maindomain: "https://rawg.io/api",
+};
+
+const fetchsub = axios.create({
+  baseURL: apiurl.subdomain,
+  params: {
+    key: process.env.RAWG_API_KEY,
+  },
+});
+
+const fetchmain = axios.create({
+  baseURL: apiurl.maindomain,
+  params: {
+    key: process.env.RAWG_API_KEY,
+  },
+});
+
+export { fetchsub, fetchmain };

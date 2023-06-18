@@ -1,4 +1,4 @@
-import fetcher, { type IAPIResponse } from "../fetcher";
+import { fetchsub, type IAPIResponse } from "../fetcher";
 
 interface IGame {
   id: number;
@@ -93,7 +93,7 @@ interface IGetAllGamesParams {
 class RawgGame {
   async getAllGames(params: Partial<IGetAllGamesParams> = {}) {
     try {
-      return await fetcher.get<IGetAllGamesResponse[]>("/games", {
+      return await fetchsub.get<IGetAllGamesResponse[]>("/games", {
         params,
       });
     } catch (err) {
@@ -104,7 +104,7 @@ class RawgGame {
 
   async getGameDetails(idOrSlug: string | number) {
     try {
-      return await fetcher.get("/games", {
+      return await fetchsub.get("/games", {
         params: {
           id: idOrSlug,
         },

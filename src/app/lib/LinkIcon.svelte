@@ -15,7 +15,7 @@
 </script>
 
 <a
-  class="flex items-center gap-2 {className}"
+  class="flex items-center gap-6 pl-4 rounded-md duration-300 hover:bg-gray-300 hover:bg-opacity-20 {className}"
   href={to}
   use:link
   use:active={activeOptions}
@@ -26,6 +26,6 @@
 
 <style>
   a.inactive {
-    @apply text-gray-500;
+    @apply text-gray-500 hover:text-white;
   }
 </style>

@@ -2,6 +2,7 @@
   import type { ActiveOptions } from "svelte-spa-router/active";
 
   import LinkIcon from "../LinkIcon.svelte";
+  import GradientBox from "../GradientBox.svelte";
 
   interface ISidebarItem {
     id: number;
@@ -75,12 +76,16 @@
   ]
 </script>
 
-<div class="w-80">
-  <ul>
+<div class="md:col-span-3 xl:col-span-2">
+  <ul class="space-y-1">
     {#each sidebarItems as sidebarItem (sidebarItem.id)}
       <li>
-        <LinkIcon to={sidebarItem.to} icon={sidebarItem.icon} text={sidebarItem.text} class="py-2 font-medium" />
+        <LinkIcon to={sidebarItem.to} icon={sidebarItem.icon} text={sidebarItem.text} class="py-2.5 font-semibold text-xl" />
       </li>
     {/each}
   </ul>
+
+  <GradientBox>
+    <p class="font-bold text-xl">Do you need help?</p>
+  </GradientBox>
 </div>

@@ -15,6 +15,7 @@ module.exports = {
         },
         martinique: "#33324D",
         conifer: "#94D847",
+        "glossy-white": "#ffffffc2"
       },
       fontFamily: {
         sans: ["Inter Tight", ...defaultTheme.fontFamily.sans]

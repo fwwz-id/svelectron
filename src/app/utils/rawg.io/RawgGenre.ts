@@ -1,4 +1,4 @@
-import fetcher, { type IAPIResponse } from "../fetcher";
+import { fetchsub, type IAPIResponse } from "../fetcher";
 
 interface IGenre {
   id: number;
@@ -25,7 +25,7 @@ interface IGetAllGenreParams {
 class RawgGenre {
   async getAllGenres(params: Partial<IGetAllGenreParams> = {}) {
     try {
-      return await fetcher.get<IGetAllGenreResponse[]>("/genres", {
+      return await fetchsub.get<IGetAllGenreResponse[]>("/genres", {
         params,
       });
     } catch (err) {
@@ -36,7 +36,7 @@ class RawgGenre {
 
   async getGenreById(id: string | number) {
     try {
-      return await fetcher.get<IGetGenreResponse>("/genres", {
+      return await fetchsub.get<IGetGenreResponse>("/genres", {
         params: {
           id,
         },
